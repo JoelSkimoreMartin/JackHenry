@@ -51,7 +51,7 @@ Visual Studio 2022 .NET 6.0 Solution
 Completed:
 
 - [x] Met requirements
-- [x] Prove functionality validity through unit tests
+- [x] Unit test code coverage
 - [x] Illustrated SOLID principles
 
 

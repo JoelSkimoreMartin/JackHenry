@@ -23,7 +23,7 @@ Visual Studio 2022 .NET 6.0 Solution
 > Our standard interview process includes a programming exercise for all levels of positions on our team. **There's no time limit on it**, as it's intended to be able to fit around your other responsibilities (home and work), however we would expect this to not take any longer than 4-6 hours. **Simply keep us updated on progress so that we know it’s active.**  Looking forward to it!
 > 
 > ### Programming Assignment:
-> Reddit, much like other social media platforms, provides a way for users to communicate their interests etc. For this exercise, we would like to see you build an application that listens to your choice of subreddits (best to choose one with a good amount of posts). You can use this link to help identify one that interests you.  We'd like to see this as a .NET 6/7 application, and you are free to use any 3rd party libraries you would like.
+> Reddit, much like other social media platforms, provides a way for users to communicate their interests etc. For this exercise, we would like to see you build an application that listens to your choice of subreddits (best to choose one with a good amount of posts). You can use this [link](https://redditcharts.com/) to help identify one that interests you.  We'd like to see this as a .NET 6/7 application, and you are free to use any 3rd party libraries you would like.
 > 
 > Your app should consume the posts from your chosen subreddit in near real time and keep track of the following statistics between the time your application starts until it ends:
 > * Posts with most up votes
@@ -43,9 +43,9 @@ Visual Studio 2022 .NET 6.0 Solution
 > 
 > ### Accessing the Reddit API
 > 
-> To get the API, register here
+> To get the API, register [here](https://www.reddit.com/wiki/api/)
 > 
-> Additional documentation can be found here.
+> Additional documentation can be found [here](https://www.reddit.com/dev/api/).
 > 
 
 Completed:

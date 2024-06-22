@@ -1,22 +1,5 @@
 # Jack Henry Coding Challenge
 
-
-## Solution
-
-Visual Studio 2022 .NET 6.0 Solution
-
-### Projects
-
-| Project | Type | Description |
-| ----------- | ----------- | ----------- |
-| [JackHenry.WebSite](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebSite) | Front-end | Angular UI |
-| [JackHenry.WebApi](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebApi) | Back-end | Restful web api |
-| [JackHenry.Models](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Models) | Back-end | Library of POCO classes |
-| [JackHenry.Business](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Business) | Back-end | Library containing the main business logic |
-| [JackHenry.Repo](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Repo) | Back-end | Library of data repository |
-| [JackHenry.Proxy.Reddit](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Proxy.Reddit) | Back-end | Library responsible for calls to the Reddit api |
-| [JackHenry.UnitTests](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests) | Unit Tests | Microsoft unit tests |
-
 ## Requirements
 
 > ### Directions:
@@ -53,11 +36,27 @@ Completed:
 - [x] Met requirements
 - [x] Illustrated basic microservice approach
 - [x] Illustrated [SOLID principles](#solid-principles-in-code)
-- [x] Illustrated Unit test code coverage
+- [x] Illustrated [Unit test code coverage](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests)
 
 
 Additional notes:
    * notes here
+
+## Solution
+
+Visual Studio 2022 .NET 6.0 Solution
+
+### Projects
+
+| Project | Type | Description |
+| ----------- | ----------- | ----------- |
+| [JackHenry.WebSite](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebSite) | Front-end | Angular UI |
+| [JackHenry.WebApi](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebApi) | Back-end | Restful web api |
+| [JackHenry.Models](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Models) | Back-end | Library of POCO classes |
+| [JackHenry.Business](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Business) | Back-end | Library containing the main business logic |
+| [JackHenry.Repo](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Repo) | Back-end | Library of data repository |
+| [JackHenry.Proxy.Reddit](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Proxy.Reddit) | Back-end | Library responsible for calls to the Reddit api |
+| [JackHenry.UnitTests](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests) | Unit Tests | Microsoft unit tests |
 
 ## SOLID principles in code
 

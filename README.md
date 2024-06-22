@@ -52,7 +52,7 @@ Completed:
 
 - [x] Met requirements
 - [x] Illustrated basic microservice approach
-- [x] Illustrated SOLID principles
+- [x] Illustrated [SOLID principles](#solid-principles-in-code)
 - [x] Illustrated Unit test code coverage
 
 

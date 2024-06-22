@@ -52,6 +52,10 @@ Additional notes:
 
 Visual Studio 2022 .NET 6.0 Solution
 
+<details>
+
+  <summary>Click for project details</summary>
+
 ### Projects
 
 | Project | Type | Description |
@@ -63,6 +67,8 @@ Visual Studio 2022 .NET 6.0 Solution
 | [JackHenry.Repo](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Repo) | Back-end | Library of data repository |
 | [JackHenry.Proxy.Reddit](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Proxy.Reddit) | Back-end | Library responsible for calls to the Reddit api |
 | [JackHenry.UnitTests](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests) | Unit Tests | Microsoft unit tests |
+
+</details>
 
 ## SOLID principles in code
 

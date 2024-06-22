@@ -2,6 +2,10 @@
 
 ## Requirements
 
+<details>
+
+  <summary>Click for details</summary>
+
 > ### Directions:
 > Our standard interview process includes a programming exercise for all levels of positions on our team. **There's no time limit on it**, as it's intended to be able to fit around your other responsibilities (home and work), however we would expect this to not take any longer than 4-6 hours. **Simply keep us updated on progress so that we know it’s active.**  Looking forward to it!
 > 
@@ -30,6 +34,8 @@
 > 
 > Additional documentation can be found [here](https://www.reddit.com/dev/api/).
 > 
+  
+</details>
 
 Completed:
 

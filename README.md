@@ -4,7 +4,7 @@
 
 <details>
 
-  <summary>Click for details</summary>
+  <summary>Click for full requirements</summary>
 
 > ### Directions:
 > Our standard interview process includes a programming exercise for all levels of positions on our team. **There's no time limit on it**, as it's intended to be able to fit around your other responsibilities (home and work), however we would expect this to not take any longer than 4-6 hours. **Simply keep us updated on progress so that we know it’s active.**  Looking forward to it!
@@ -56,7 +56,7 @@ Visual Studio 2022 .NET 6.0 Solution
 
 | Project | Type | Description |
 | ----------- | ----------- | ----------- |
-| [JackHenry.WebSite](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebSite) | Front-end | Angular UI |
+| [JackHenry.Console.Watcher](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Console.Watcher) | Front-end | Console application for watching Reddit activity |
 | [JackHenry.WebApi](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebApi) | Back-end | Restful web api |
 | [JackHenry.Models](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Models) | Back-end | Library of POCO classes |
 | [JackHenry.Business](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Business) | Back-end | Library containing the main business logic |

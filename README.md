@@ -51,19 +51,13 @@ Visual Studio 2022 .NET 6.0 Solution
 Completed:
 
 - [x] Met requirements
-- [x] Unit test code coverage
+- [x] Illustrated basic microservice approach
 - [x] Illustrated SOLID principles
+- [x] Illustrated Unit test code coverage
 
 
 Additional notes:
-   * Added the following in order to better illustrate the SOLID principles
-      * Repository layer
-      * Web API
-      * Reporter classes to format execution results
-   * Only created unit tests for the requirement functionality and not for these additional pieces of code
-   * The code is light on comments because I'm relying on this document to square the code to the requirements.
-      * Want to avoid a game of hide-and-go-seek to find what is where.
-
+   * notes here
 
 ## SOLID principles in code
 

@@ -1,23 +1,10 @@
 # Jack Henry Coding Challenge
 
-
-## Solution
-
-Visual Studio 2022 .NET 6.0 Solution
-
-### Projects
-
-| Project | Type | Description |
-| ----------- | ----------- | ----------- |
-| [JackHenry.WebSite](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebSite) | Front-end | Angular UI |
-| [JackHenry.WebApi](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebApi) | Back-end | Restful web api |
-| [JackHenry.Models](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Models) | Back-end | Library of POCO classes |
-| [JackHenry.Business](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Business) | Back-end | Library containing the main business logic |
-| [JackHenry.Repo](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Repo) | Back-end | Library of data repository |
-| [JackHenry.Proxy.Reddit](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Proxy.Reddit) | Back-end | Library responsible for calls to the Reddit api |
-| [JackHenry.UnitTests](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests) | Unit Tests | Microsoft unit tests |
-
 ## Requirements
+
+<details>
+
+  <summary>Click for full requirements</summary>
 
 > ### Directions:
 > Our standard interview process includes a programming exercise for all levels of positions on our team. **There's no time limit on it**, as it's intended to be able to fit around your other responsibilities (home and work), however we would expect this to not take any longer than 4-6 hours. **Simply keep us updated on progress so that we know it’s active.**  Looking forward to it!
@@ -47,23 +34,41 @@ Visual Studio 2022 .NET 6.0 Solution
 > 
 > Additional documentation can be found [here](https://www.reddit.com/dev/api/).
 > 
+  
+</details>
 
 Completed:
 
 - [x] Met requirements
-- [x] Unit test code coverage
-- [x] Illustrated SOLID principles
+- [x] Illustrated basic microservice approach
+- [x] Illustrated [SOLID principles](#solid-principles-in-code)
+- [x] Illustrated [Unit test code coverage](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests)
 
 
 Additional notes:
-   * Added the following in order to better illustrate the SOLID principles
-      * Repository layer
-      * Web API
-      * Reporter classes to format execution results
-   * Only created unit tests for the requirement functionality and not for these additional pieces of code
-   * The code is light on comments because I'm relying on this document to square the code to the requirements.
-      * Want to avoid a game of hide-and-go-seek to find what is where.
+   * notes here
 
+## Solution
+
+Visual Studio 2022 .NET 6.0 Solution
+
+<details>
+
+  <summary>Click for project details</summary>
+
+### Projects
+
+| Project | Type | Description |
+| ----------- | ----------- | ----------- |
+| [JackHenry.Console.Watcher](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Console.Watcher) | Front-end | Console application for watching Reddit activity |
+| [JackHenry.WebApi](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.WebApi) | Back-end | Restful web api |
+| [JackHenry.Models](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Models) | Back-end | Library of POCO classes |
+| [JackHenry.Business](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Business) | Back-end | Library containing the main business logic |
+| [JackHenry.Repo](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Repo) | Back-end | Library of data repository |
+| [JackHenry.Proxy.Reddit](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.Proxy.Reddit) | Back-end | Library responsible for calls to the Reddit api |
+| [JackHenry.UnitTests](https://github.com/JoelSkimoreMartin/JackHenry/tree/main/JackHenry.UnitTests) | Unit Tests | Microsoft unit tests |
+
+</details>
 
 ## SOLID principles in code
 

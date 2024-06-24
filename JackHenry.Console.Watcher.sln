@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Models", "JackHenry.Models\JackHenry.Models.csproj", "{931450E8-2FBA-4E02-A295-31D31CEF889A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Global", "Global", "{B96CC8EB-A6D1-4B5B-88BF-2B5EEF7B8E6D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{016F0921-BFDF-4810-B36B-FEA8755987EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{9F64849E-A455-4534-A619-D50BE05F08D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Console.Watcher", "JackHenry.Console.Watcher\JackHenry.Console.Watcher.csproj", "{361A10FA-2A24-4EF5-A2D2-4E6C993B21B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Proxy", "JackHenry.Proxy\JackHenry.Proxy.csproj", "{F74155D6-A190-4990-9E3A-620C8AE6533C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.UnitTests.Console.Watcher", "JackHenry.UnitTests.Console.Watcher\JackHenry.UnitTests.Console.Watcher.csproj", "{F0E632FF-665B-483D-8C30-6BFB1623A5F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{931450E8-2FBA-4E02-A295-31D31CEF889A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931450E8-2FBA-4E02-A295-31D31CEF889A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931450E8-2FBA-4E02-A295-31D31CEF889A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931450E8-2FBA-4E02-A295-31D31CEF889A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361A10FA-2A24-4EF5-A2D2-4E6C993B21B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361A10FA-2A24-4EF5-A2D2-4E6C993B21B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361A10FA-2A24-4EF5-A2D2-4E6C993B21B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361A10FA-2A24-4EF5-A2D2-4E6C993B21B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F74155D6-A190-4990-9E3A-620C8AE6533C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74155D6-A190-4990-9E3A-620C8AE6533C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74155D6-A190-4990-9E3A-620C8AE6533C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74155D6-A190-4990-9E3A-620C8AE6533C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{931450E8-2FBA-4E02-A295-31D31CEF889A} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
+		{F74155D6-A190-4990-9E3A-620C8AE6533C} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
+		{F0E632FF-665B-483D-8C30-6BFB1623A5F1} = {9F64849E-A455-4534-A619-D50BE05F08D1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DD8D97B-28BC-4E9F-9A38-5B7D99E1CB4C}
+	EndGlobalSection
+EndGlobal

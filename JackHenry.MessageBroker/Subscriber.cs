@@ -1,8 +1,8 @@
-﻿using JackHenry.Models.Interfaces;
+﻿using JackHenry.MessageBroker.Interfaces;
 
 namespace JackHenry.MessageBroker;
 
-internal class Subscriber<TEvent>
-	where TEvent : IEvent, new()
+internal class Subscriber<TCommand>
+	where TCommand : ICommand, new()
 {
 }

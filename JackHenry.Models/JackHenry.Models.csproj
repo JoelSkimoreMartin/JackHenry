@@ -5,8 +5,4 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
-
 </Project>

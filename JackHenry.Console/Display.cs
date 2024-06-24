@@ -1,13 +1,14 @@
-﻿using JackHenry.Console.Watcher.Interfaces;
+﻿using JackHenry.Console.Interfaces;
 using Output = System.Console;
 
-namespace JackHenry.Console.Watcher;
+namespace JackHenry.Console;
 
 internal class Display : IDisplay
 {
 	private const int Offset = 2;
 	private int Tabs { get; set; }
 
+	/// <inheritdoc />
 	public IDisplay Clear()
 	{
 		Tabs = 0;
@@ -22,6 +23,7 @@ internal class Display : IDisplay
 		return this;
 	}
 
+	/// <inheritdoc />
 	public IDisplay Indent()
 	{
 		Tabs++;
@@ -29,6 +31,7 @@ internal class Display : IDisplay
 		return this;
 	}
 
+	/// <inheritdoc />
 	public IDisplay Outdent()
 	{
 		Tabs--;
@@ -39,6 +42,7 @@ internal class Display : IDisplay
 		return this;
 	}
 
+	/// <inheritdoc />
 	public IDisplay WriteLine(string value = null)
 	{
 		value = new string('\t', Offset + Tabs) + (value ?? string.Empty);

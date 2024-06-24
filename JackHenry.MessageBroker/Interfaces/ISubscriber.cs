@@ -1,9 +1,7 @@
-﻿using JackHenry.Models.Interfaces;
+﻿namespace JackHenry.MessageBroker.Interfaces;
 
-namespace JackHenry.MessageBroker.Interfaces;
-
-public interface ISubscriber<TEvent>
-	where TEvent : IEvent, new()
+public interface ISubscriber<TCommand>
+	where TCommand : ICommand, new()
 {
 
 }

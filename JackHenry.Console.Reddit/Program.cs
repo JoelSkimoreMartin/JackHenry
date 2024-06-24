@@ -1,31 +1,24 @@
-﻿using JackHenry.Console.Reddit.Interfaces;
+﻿using JackHenry.Console;
+using JackHenry.Console.Reddit.Interfaces;
 using JackHenry.MessageBroker.IoC;
 using JackHenry.Proxy.Reddit.IoC;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.IO;
 using System.Threading.Tasks;
 
-public class Program
+public class Program : ProgramBase
 {
 	static Program()
 	{
-		IConfiguration config =
-			new ConfigurationBuilder()
-				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-				.Build();
+		var config = BuildConfig();
 
-		ServiceProvider =
-			new ServiceCollection()
+		SetUp(
+			services =>
+			services
 				.AddRedditProxy(config)
 				.AddMessageBroker(config)
-				.AddScoped<ISubRedditMonitor, ISubRedditMonitor>()
-				.BuildServiceProvider();
+				.AddScoped<ISubRedditMonitor, ISubRedditMonitor>());
 	}
-
-	private static ServiceProvider ServiceProvider { get; }
 
 	public static async Task Main(string[] args)
 	{

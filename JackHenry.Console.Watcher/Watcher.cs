@@ -1,4 +1,5 @@
-﻿using JackHenry.Console.Watcher.Interfaces;
+﻿using JackHenry.Console.Interfaces;
+using JackHenry.Console.Watcher.Interfaces;
 using JackHenry.Models;
 using JackHenry.Proxy.Interfaces;
 using System;

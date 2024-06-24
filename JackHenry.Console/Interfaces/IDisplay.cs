@@ -1,4 +1,4 @@
-﻿namespace JackHenry.Console.Watcher.Interfaces;
+﻿namespace JackHenry.Console.Interfaces;
 
 public interface IDisplay
 {

@@ -1,30 +1,22 @@
-﻿using JackHenry.Console.Watcher;
+﻿using JackHenry.Console;
+using JackHenry.Console.Watcher;
 using JackHenry.Console.Watcher.Interfaces;
 using JackHenry.Proxy.IoC;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.IO;
 using System.Threading.Tasks;
 
-public class Program
+public class Program : ProgramBase
 {
 	static Program()
 	{
-		IConfiguration config =
-			new ConfigurationBuilder()
-				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-				.Build();
+		var config = BuildConfig();
 
-		ServiceProvider =
-			new ServiceCollection()
+		SetUp(
+			services =>
+			services
 				.AddWebApiProxy(config)
-				.AddSingleton<IDisplay, Display>()
-				.AddSingleton<IWatcher, Watcher>()
-				.BuildServiceProvider();
+				.AddSingleton<IWatcher, Watcher>());
 	}
-
-	private static ServiceProvider ServiceProvider { get; }
 
 	public static async Task Main(string[] args)
 	{

@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Proxy", "JackHenr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.UnitTests.Console.Watcher", "JackHenry.UnitTests.Console.Watcher\JackHenry.UnitTests.Console.Watcher.csproj", "{F0E632FF-665B-483D-8C30-6BFB1623A5F1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Console", "JackHenry.Console\JackHenry.Console.csproj", "{5614555F-C902-41BE-ABB3-7AFBFAB954D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.UnitTests", "JackHenry.UnitTests\JackHenry.UnitTests.csproj", "{C1539914-1A4F-46E7-AA4A-65158B695355}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0E632FF-665B-483D-8C30-6BFB1623A5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5614555F-C902-41BE-ABB3-7AFBFAB954D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5614555F-C902-41BE-ABB3-7AFBFAB954D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5614555F-C902-41BE-ABB3-7AFBFAB954D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5614555F-C902-41BE-ABB3-7AFBFAB954D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1539914-1A4F-46E7-AA4A-65158B695355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1539914-1A4F-46E7-AA4A-65158B695355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1539914-1A4F-46E7-AA4A-65158B695355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1539914-1A4F-46E7-AA4A-65158B695355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +63,8 @@ Global
 		{931450E8-2FBA-4E02-A295-31D31CEF889A} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 		{F74155D6-A190-4990-9E3A-620C8AE6533C} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 		{F0E632FF-665B-483D-8C30-6BFB1623A5F1} = {9F64849E-A455-4534-A619-D50BE05F08D1}
+		{5614555F-C902-41BE-ABB3-7AFBFAB954D3} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
+		{C1539914-1A4F-46E7-AA4A-65158B695355} = {9F64849E-A455-4534-A619-D50BE05F08D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DD8D97B-28BC-4E9F-9A38-5B7D99E1CB4C}

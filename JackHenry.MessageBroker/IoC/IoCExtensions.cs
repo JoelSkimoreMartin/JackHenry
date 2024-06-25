@@ -16,7 +16,7 @@ public static class IoCExtensions
 
 		return
 			services
-				.Configure<List<MessageBrokerOptions>>(configuration.GetSection(MessageBrokerOptions.Section))
+				.Configure<MessageBrokerOptions>(configuration.GetSection(MessageBrokerOptions.Section))
 				.AddSingleton<IFileSystem, FileSystem>()
 				.AddScoped(typeof(IPublisher<>), typeof(Publisher<>))
 				.AddScoped(typeof(ISubscriber<>), typeof(Subscriber<>));

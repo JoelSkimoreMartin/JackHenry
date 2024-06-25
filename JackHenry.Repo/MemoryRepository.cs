@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace JackHenry.Repo;
 
+/// <inheritdoc />
 internal class MemoryRepository : ISubRedditRepository
 {
 	public MemoryRepository(IMemoryCache memoryCache)
@@ -32,6 +33,7 @@ internal class MemoryRepository : ISubRedditRepository
 		return SubReddits;
 	}
 
+	/// <inheritdoc />
 	public async Task<IEnumerable<SubReddit>> GetAllAsync()
 	{
 		var subReddits = await GetSubRedditsAsync();
@@ -39,6 +41,7 @@ internal class MemoryRepository : ISubRedditRepository
 		return subReddits.Values.ToArray();
 	}
 
+	/// <inheritdoc />
 	public async Task<SubReddit> GetAsync(string name)
 	{
 		var subReddits = await GetSubRedditsAsync();
@@ -48,6 +51,7 @@ internal class MemoryRepository : ISubRedditRepository
 		return subreddit;
 	}
 
+	/// <inheritdoc />
 	public async Task UpsertAsync(SubReddit subReddit)
 	{
 		var subReddits = await GetSubRedditsAsync();
@@ -64,6 +68,7 @@ internal class MemoryRepository : ISubRedditRepository
 		}
 	}
 
+	/// <inheritdoc />
 	public async Task DeleteAsync(string name)
 	{
 		var subReddits = await GetSubRedditsAsync();

@@ -8,7 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\JackHenry.Console\JackHenry.Console.csproj" />
     <ProjectReference Include="..\JackHenry.Models\JackHenry.Models.csproj" />
-    <ProjectReference Include="..\JackHenry.Proxy\JackHenry.Proxy.csproj" />
+    <ProjectReference Include="..\JackHenry.Proxy.CRUD\JackHenry.Proxy.CRUD.csproj" />
   </ItemGroup>
 
   <ItemGroup>

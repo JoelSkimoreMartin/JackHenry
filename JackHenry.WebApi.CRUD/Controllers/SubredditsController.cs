@@ -1,3 +1,5 @@
+using JackHenry.MessageBroker.Commands;
+using JackHenry.MessageBroker.Interfaces;
 using JackHenry.Models;
 using JackHenry.Repo.Interfaces;
 using JackHenry.WebApi.CRUD.Hubs;
@@ -24,17 +26,23 @@ namespace JackHenry.WebApi.CRUD.Controllers
 		/// </summary>
 		/// <param name="repository">repository for storing results</param>
 		/// <param name="signalR">SignalR context</param>
-		public SubredditsController(ISubRedditRepository repository, IHubContext<CrudHub> signalR)
+		public SubredditsController(
+			IPublisher<MonitorSubReddit> publisher,
+			ISubRedditRepository repository,
+			IHubContext<CrudHub> signalR)
 		{
+			ArgumentNullException.ThrowIfNull(publisher);
 			ArgumentNullException.ThrowIfNull(repository);
 			ArgumentNullException.ThrowIfNull(signalR);
 
 			Repo = repository;
 			SignalR = signalR;
+			Publisher = publisher;
 		}
 
 		private ISubRedditRepository Repo { get; }
 		private IHubContext<CrudHub> SignalR { get; }
+		private IPublisher<MonitorSubReddit> Publisher { get; }
 
 		private string BaseUrl => $"{Request.Scheme}://{Request.Host.Value}";
 
@@ -111,6 +119,13 @@ namespace JackHenry.WebApi.CRUD.Controllers
 
 			await SignalAsync(name);
 
+			Publisher.Publish(
+				new MonitorSubReddit
+				{
+					Name = name,
+					Start = true,
+				});
+
 			var url = $"{BaseUrl}/api/subreddits/{subReddit.Name.ToLower()}";
 
 			return Created(new Uri(url, UriKind.RelativeOrAbsolute), subReddit);
@@ -165,6 +180,13 @@ namespace JackHenry.WebApi.CRUD.Controllers
 			await Repo.DeleteAsync(name);
 
 			await SignalAsync(name);
+
+			Publisher.Publish(
+				new MonitorSubReddit
+				{
+					Name = name,
+					Stop = true,
+				});
 
 			return Ok(name);
 		}

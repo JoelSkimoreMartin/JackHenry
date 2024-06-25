@@ -1,7 +1,7 @@
 ﻿using JackHenry.Console;
 using JackHenry.Console.Watcher;
 using JackHenry.Console.Watcher.Interfaces;
-using JackHenry.Proxy.IoC;
+using JackHenry.Proxy.CRUD.IoC;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 
@@ -14,7 +14,7 @@ public class Program : ProgramBase
 		SetUp(
 			services =>
 			services
-				.AddWebApiProxy(config)
+				.AddCrudProxy(config)
 				.AddSingleton<IWatcher, Watcher>());
 	}
 

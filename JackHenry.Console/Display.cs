@@ -3,6 +3,7 @@ using Output = System.Console;
 
 namespace JackHenry.Console;
 
+/// <inheritdoc />
 internal class Display : IDisplay
 {
 	private const int Offset = 2;

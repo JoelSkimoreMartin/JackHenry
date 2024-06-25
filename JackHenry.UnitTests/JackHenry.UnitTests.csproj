@@ -15,6 +15,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JackHenry.Console.CRUD\JackHenry.Console.CRUD.csproj" />
+    <ProjectReference Include="..\JackHenry.Console.Reddit\JackHenry.Console.Reddit.csproj" />
+    <ProjectReference Include="..\JackHenry.Console.Watcher\JackHenry.Console.Watcher.csproj" />
+    <ProjectReference Include="..\JackHenry.Console\JackHenry.Console.csproj" />
+    <ProjectReference Include="..\JackHenry.MessageBroker\JackHenry.MessageBroker.csproj" />
+    <ProjectReference Include="..\JackHenry.Models\JackHenry.Models.csproj" />
+    <ProjectReference Include="..\JackHenry.Proxy.CRUD\JackHenry.Proxy.CRUD.csproj" />
+    <ProjectReference Include="..\JackHenry.Proxy.Reddit\JackHenry.Proxy.Reddit.csproj" />
+    <ProjectReference Include="..\JackHenry.Repo\JackHenry.Repo.csproj" />
+    <ProjectReference Include="..\JackHenry.WebApi.CRUD\JackHenry.WebApi.CRUD.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 

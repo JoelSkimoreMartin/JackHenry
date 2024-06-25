@@ -2,6 +2,7 @@
 
 namespace JackHenry.Proxy.Reddit;
 
+/// <inheritdoc />
 internal class RedditProxy : IRedditProxy
 {
 }

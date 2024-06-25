@@ -1,16 +1,19 @@
+using JackHenry.MessageBroker.IoC;
 using JackHenry.Models;
 using JackHenry.Repo.IoC;
+using JackHenry.Settings.IoC;
 using JackHenry.WebApi.CRUD.Hubs;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.IO;
 using System.Reflection;
 
-var builder = WebApplication.CreateBuilder(args);
+var config = new ConfigurationBuilder().BuildConfig();
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
@@ -18,6 +21,7 @@ builder.Services.AddSignalR();
 
 builder.Services
 	.AddRepository()
+	.AddMessageBroker(config)
 	.AddEndpointsApiExplorer()
 	.AddSwaggerGen(c =>
 	{

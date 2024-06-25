@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace JackHenry.MessageBroker.Interfaces;
 
@@ -9,5 +8,5 @@ internal interface IFileSystem
 
 	IEnumerable<TCommand> ReadAll<TCommand>() where TCommand : ICommand, new();
 
-	Task<TCommand> ReadNextAsync<TCommand>() where TCommand : ICommand, new();
+	TCommand ReadNext<TCommand>() where TCommand : ICommand, new();
 }

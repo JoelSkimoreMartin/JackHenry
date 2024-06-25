@@ -10,8 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JackHenry.MessageBroker\JackHenry.MessageBroker.csproj" />
     <ProjectReference Include="..\JackHenry.Models\JackHenry.Models.csproj" />
     <ProjectReference Include="..\JackHenry.Repo\JackHenry.Repo.csproj" />
+    <ProjectReference Include="..\JackHenry.Settings\JackHenry.Settings.csproj" />
   </ItemGroup>
 
 </Project>

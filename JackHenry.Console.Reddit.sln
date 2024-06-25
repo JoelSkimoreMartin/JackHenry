@@ -5,27 +5,17 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Models", "JackHenry.Models\JackHenry.Models.csproj", "{931450E8-2FBA-4E02-A295-31D31CEF889A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Global", "Global", "{B96CC8EB-A6D1-4B5B-88BF-2B5EEF7B8E6D}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{016F0921-BFDF-4810-B36B-FEA8755987EC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{9F64849E-A455-4534-A619-D50BE05F08D1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Proxy.Reddit", "JackHenry.Proxy.Reddit\JackHenry.Proxy.Reddit.csproj", "{A4A3CDD4-FF43-42EB-B07B-FEB96DB13BCC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Console.Reddit", "JackHenry.Console.Reddit\JackHenry.Console.Reddit.csproj", "{2E2D9308-D45B-432E-A29E-D8CCFCE896EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.UnitTests.Console.Reddit", "JackHenry.UnitTests.Console.Reddit\JackHenry.UnitTests.Console.Reddit.csproj", "{2651221A-E537-4AEE-8978-792267CE8BE6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.MessageBroker", "JackHenry.MessageBroker\JackHenry.MessageBroker.csproj", "{569C8E59-4243-4CA0-ACC7-18367FB085D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackHenry.UnitTests", "JackHenry.UnitTests\JackHenry.UnitTests.csproj", "{6C1178EE-D9C2-4F61-92A6-E5D843F67E1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Console", "JackHenry.Console\JackHenry.Console.csproj", "{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackHenry.Console", "JackHenry.Console\JackHenry.Console.csproj", "{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Settings", "JackHenry.Settings\JackHenry.Settings.csproj", "{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,22 +35,18 @@ Global
 		{2E2D9308-D45B-432E-A29E-D8CCFCE896EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E2D9308-D45B-432E-A29E-D8CCFCE896EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E2D9308-D45B-432E-A29E-D8CCFCE896EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2651221A-E537-4AEE-8978-792267CE8BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2651221A-E537-4AEE-8978-792267CE8BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2651221A-E537-4AEE-8978-792267CE8BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2651221A-E537-4AEE-8978-792267CE8BE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{569C8E59-4243-4CA0-ACC7-18367FB085D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{569C8E59-4243-4CA0-ACC7-18367FB085D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{569C8E59-4243-4CA0-ACC7-18367FB085D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{569C8E59-4243-4CA0-ACC7-18367FB085D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C1178EE-D9C2-4F61-92A6-E5D843F67E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C1178EE-D9C2-4F61-92A6-E5D843F67E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C1178EE-D9C2-4F61-92A6-E5D843F67E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C1178EE-D9C2-4F61-92A6-E5D843F67E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,10 +54,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{931450E8-2FBA-4E02-A295-31D31CEF889A} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 		{A4A3CDD4-FF43-42EB-B07B-FEB96DB13BCC} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
-		{2651221A-E537-4AEE-8978-792267CE8BE6} = {9F64849E-A455-4534-A619-D50BE05F08D1}
 		{569C8E59-4243-4CA0-ACC7-18367FB085D3} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
-		{6C1178EE-D9C2-4F61-92A6-E5D843F67E1C} = {9F64849E-A455-4534-A619-D50BE05F08D1}
 		{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
+		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DD8D97B-28BC-4E9F-9A38-5B7D99E1CB4C}

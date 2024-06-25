@@ -6,10 +6,11 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace JackHenry.MessageBroker;
 
+/// <inheritdoc />
 internal class FileSystem : IFileSystem
 {
 	public FileSystem(IOptions<MessageBrokerOptions> options)
@@ -28,6 +29,7 @@ internal class FileSystem : IFileSystem
 	private ConcurrentDictionary<Type, FileSystemWatcher> FileWatchers { get; } =
 		new ConcurrentDictionary<Type, FileSystemWatcher>();
 
+	/// <inheritdoc />
 	public void Write<TCommand>(TCommand command)
 		where TCommand : ICommand, new()
 	{
@@ -36,37 +38,73 @@ internal class FileSystem : IFileSystem
 		File.WriteAllText(fileName, JsonConvert.SerializeObject(command));
 	}
 
+	/// <inheritdoc />
 	public IEnumerable<TCommand> ReadAll<TCommand>()
 		where TCommand : ICommand, new()
 	{
-		TCommand command;
-
 		var path = GetDirectory<TCommand>();
 
 		foreach (var fileName in Directory.GetFiles(path))
 		{
-			try
-			{
-				command = JsonConvert.DeserializeObject<TCommand>(File.ReadAllText(fileName));
+			var command = Read<TCommand>(fileName);
 
-				File.Delete(fileName);
-			}
-			catch
-			{
+			if (command is null)
 				continue;
-			}
 
 			yield return command;
 		}
 	}
 
-	public async Task<TCommand> ReadNextAsync<TCommand>()
+	/// <inheritdoc />
+	public TCommand ReadNext<TCommand>()
 		where TCommand : ICommand, new()
 	{
-		throw new NotImplementedException();
+		var fileName = string.Empty;
+		var signal = new EventWaitHandle(false, EventResetMode.AutoReset);
+
+		var path = GetDirectory<TCommand>();
+
+		using var watcher =
+			new FileSystemWatcher
+			{
+				Path = path,
+				NotifyFilter = NotifyFilters.LastWrite,
+				Filter = "*",
+				EnableRaisingEvents = true,
+			};
+
+		watcher.Changed +=
+			new FileSystemEventHandler(
+				(sender, args) =>
+				{
+					fileName = args.FullPath;
+					signal.Set();
+				});
+
+		signal.WaitOne();
+
+		return Read<TCommand>(fileName);
 	}
 
 	#region Helper methods
+
+	private TCommand Read<TCommand>(string fileName)
+		where TCommand : ICommand, new()
+	{
+		TCommand command;
+		try
+		{
+			command = JsonConvert.DeserializeObject<TCommand>(File.ReadAllText(fileName));
+
+			File.Delete(fileName);
+		}
+		catch
+		{
+			return default;
+		}
+
+		return command;
+	}
 
 	private string GetFileName<TCommand>(TCommand command)
 		where TCommand : ICommand, new()

@@ -1,5 +1,8 @@
-﻿namespace JackHenry.MessageBroker.Commands;
+﻿using JackHenry.Models;
 
-public class QuerySubReddit
+namespace JackHenry.MessageBroker.Commands;
+
+public class QuerySubReddit : Command
 {
+	public SubReddit SubReddit { get; set; }
 }

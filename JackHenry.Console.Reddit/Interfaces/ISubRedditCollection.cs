@@ -6,7 +6,8 @@ namespace JackHenry.Console.Reddit.Interfaces;
 
 public interface ISubRedditCollection : IEnumerable<SubReddit>
 {
-	Task StartListenerAsync();
-
 	SubReddit this[string name] { get; }
+
+	Task StartListenerAsync();
+	Task UpdateAsync(IEnumerable<SubReddit> subReddits);
 }

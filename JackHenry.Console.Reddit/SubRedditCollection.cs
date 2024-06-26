@@ -88,4 +88,23 @@ internal class SubRedditCollection : ISubRedditCollection
 			}
 		}
 	}
+
+	/// <inheritdoc />
+	public async Task UpdateAsync(IEnumerable<SubReddit> subReddits)
+	{
+		foreach (var subReddit in subReddits)
+		{
+			var existing = this[subReddit.Name];
+
+			if (existing is null)
+				continue;
+
+			existing.Posts =
+				subReddit.Posts
+					.Union(existing.Posts.Where(e => subReddit.Posts.Any(n => n.Id == e.Id)))
+					.ToArray();
+
+			await Proxy.UpdateAsync(existing);
+		}
+	}
 }

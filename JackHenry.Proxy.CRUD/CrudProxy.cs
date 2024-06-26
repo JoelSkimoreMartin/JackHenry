@@ -5,8 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text.Json.Nodes;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml.Linq;
 
 namespace JackHenry.Proxy.CRUD;
 
@@ -24,6 +27,8 @@ internal class CrudProxy : ICrudProxy
 
 	private const string SubRedditsEndpoint = "api/subreddits";
 
+	private string EndpointByName(string name) => $"{SubRedditsEndpoint}/{HttpUtility.UrlEncode(name)}";
+
 	/// <inheritdoc />
 	public async Task<IEnumerable<SubReddit>> GetSubRedditsAsync() =>
 		await GetAsync<IEnumerable<SubReddit>>(SubRedditsEndpoint)
@@ -31,7 +36,7 @@ internal class CrudProxy : ICrudProxy
 		Array.Empty<SubReddit>();
 
 	/// <inheritdoc />
-	public async Task<SubReddit> GetSubRedditAsync(string name) => await GetAsync<SubReddit>($"{SubRedditsEndpoint}/{name}");
+	public async Task<SubReddit> GetSubRedditAsync(string name) => await GetAsync<SubReddit>(EndpointByName(name));
 
 	/// <inheritdoc />
 	public async Task UpdateAsync(SubReddit subReddit)
@@ -55,7 +60,9 @@ internal class CrudProxy : ICrudProxy
 
 			try
 			{
-				await client.PostAsJsonAsync(HttpUtility.UrlEncode(subReddit.Name), json);
+				var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+				await client.PutAsync(EndpointByName(subReddit.Name), content);
 
 				return;
 			}

@@ -28,7 +28,7 @@ public class SubReddit
 	/// </summary>
 	public Post[] MostUpVotedPosts =>
 		Posts?
-			.OrderBy(p => p.UpVotes)
+			.OrderByDescending(p => p.UpVotes)
 			.Take(MostUpVotedDisplayCount)
 			.ToArray()
 		??

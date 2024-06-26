@@ -56,7 +56,7 @@ internal class MemoryRepository : ISubRedditRepository
 	{
 		var subReddits = await GetSubRedditsAsync();
 
-		subReddits.TryGetValue(subReddit.Name, out var existing);
+		subReddits.TryGetValue(subReddit.Name.ToUpper(), out var existing);
 
 		if (existing is null)
 		{

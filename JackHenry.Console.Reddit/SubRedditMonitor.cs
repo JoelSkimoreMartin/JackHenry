@@ -1,10 +1,10 @@
-﻿using JackHenry.Console.Extensions;
-using JackHenry.Console.Interfaces;
+﻿using JackHenry.Console.Interfaces;
 using JackHenry.Console.Reddit.Extensions;
 using JackHenry.Console.Reddit.Interfaces;
-using JackHenry.MessageBroker.Commands;
-using JackHenry.MessageBroker.Interfaces;
+using JackHenry.Proxy.CRUD.Interfaces;
 using System;
+using System.Collections.Concurrent;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace JackHenry.Console.Reddit;
@@ -13,40 +13,77 @@ namespace JackHenry.Console.Reddit;
 internal class SubRedditMonitor : ISubRedditMonitor
 {
 	public SubRedditMonitor(
+		ICrudProxy proxy,
 		IDisplay display,
-		ISubscriber<QuerySubReddit> subscriber,
-		IPublisher<UpdateSubReddit> publisher)
+		ISubRedditCollection subReddits)
 	{
+		ArgumentNullException.ThrowIfNull(proxy);
 		ArgumentNullException.ThrowIfNull(display);
-		ArgumentNullException.ThrowIfNull(subscriber);
-		ArgumentNullException.ThrowIfNull(publisher);
+		ArgumentNullException.ThrowIfNull(subReddits);
 
+		Proxy = proxy;
 		Display = display;
-		Subscriber = subscriber;
-		Publisher = publisher;
+		SubReddits = subReddits;
 	}
 
+	private ICrudProxy Proxy { get; }
 	private IDisplay Display { get; }
-	private ISubscriber<QuerySubReddit> Subscriber { get; }
-	private IPublisher<UpdateSubReddit> Publisher { get; }
+	private ISubRedditCollection SubReddits { get; }
+
+	private EventWaitHandle QueryReady { get; } = new EventWaitHandle(false, EventResetMode.AutoReset);
+	private ConcurrentQueue<string> QueryQueue { get; } = new ConcurrentQueue<string>();
 
 	/// <inheritdoc />
 	public async Task MonitorAsync()
 	{
 		Display.Start();
 
-		foreach (var query in Subscriber.Subscribe())
+		var tasks =
+			new[]
+			{
+				SubReddits.StartListenerAsync(),
+				DispatchAsync(),
+				QueryRedditAsync(),
+			};
+
+		await Task.WhenAll(tasks);
+	}
+
+	private async Task DispatchAsync()
+	{
+		while (true)
 		{
-			var subReddit = query?.SubReddit;
+			await Task.Delay(1000);
 
-			if (subReddit is null)
-				continue;
+			foreach (var subReddit in SubReddits)
+			{
+				var name = subReddit?.Name;
 
-			Display.Received<QuerySubReddit>(subReddit.Name);
+				if (string.IsNullOrEmpty(name))
+					continue;
 
-			Publisher.Publish(new UpdateSubReddit { SubReddit = subReddit });
+				QueryQueue.Enqueue(name);
 
-			Display.Published<UpdateSubReddit>(subReddit.Name);
+				QueryReady.Set();
+			}
+		}
+	}
+
+	private async Task QueryRedditAsync()
+	{
+		while (true)
+		{
+			QueryReady.WaitOne();
+
+			while (QueryQueue.TryDequeue(out var name))
+			{
+				var subReddit = SubReddits[name];
+
+				if (subReddit is null)
+					continue;
+
+				Display.WriteLine($"Quering Reddit for subreddit: r/{name}");
+			}
 		}
 	}
 }

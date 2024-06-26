@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JackHenry.Console.CRUD\JackHenry.Console.CRUD.csproj" />
     <ProjectReference Include="..\JackHenry.Console.Reddit\JackHenry.Console.Reddit.csproj" />
     <ProjectReference Include="..\JackHenry.Console.Watcher\JackHenry.Console.Watcher.csproj" />
     <ProjectReference Include="..\JackHenry.Console\JackHenry.Console.csproj" />

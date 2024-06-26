@@ -13,6 +13,6 @@ internal static class DisplayExtensions
 		return
 			display
 				.Clear()
-				.WriteLine($"Start listening for {nameof(QuerySubReddit)} commands.");
+				.WriteLine($"Start listening for {nameof(MonitorSubReddit)} commands.");
 	}
 }

@@ -10,13 +10,13 @@ public static class DisplayExtensions
 		ArgumentNullException.ThrowIfNull(display);
 		ArgumentNullException.ThrowIfNull(subRedditName);
 
-		return display.WriteLine($"Received {nameof(TCommand)} command for subreddit r/{subRedditName}.");
+		return display.WriteLine($"Received {typeof(TCommand).Name} command for subreddit r/{subRedditName}.");
 	}
 	public static IDisplay Published<TCommand>(this IDisplay display, string subRedditName)
 	{
 		ArgumentNullException.ThrowIfNull(display);
 		ArgumentNullException.ThrowIfNull(subRedditName);
 
-		return display.WriteLine($"Published {nameof(TCommand)} command for subreddit r/{subRedditName}.");
+		return display.WriteLine($"Published {typeof(TCommand).Name} command for subreddit r/{subRedditName}.");
 	}
 }

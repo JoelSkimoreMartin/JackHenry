@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Console", "JackHe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Settings", "JackHenry.Settings\JackHenry.Settings.csproj", "{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackHenry.Proxy.CRUD", "JackHenry.Proxy.CRUD\JackHenry.Proxy.CRUD.csproj", "{62C51515-575B-4EE5-A133-3F2618DDF9BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C51515-575B-4EE5-A133-3F2618DDF9BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C51515-575B-4EE5-A133-3F2618DDF9BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C51515-575B-4EE5-A133-3F2618DDF9BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C51515-575B-4EE5-A133-3F2618DDF9BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{569C8E59-4243-4CA0-ACC7-18367FB085D3} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 		{62387075-7B6E-4EA2-86E3-E9BB94A5C6C6} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 		{95DC4910-D4B1-47E7-93AE-1DDCCF9D0165} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
+		{62C51515-575B-4EE5-A133-3F2618DDF9BD} = {016F0921-BFDF-4810-B36B-FEA8755987EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8DD8D97B-28BC-4E9F-9A38-5B7D99E1CB4C}

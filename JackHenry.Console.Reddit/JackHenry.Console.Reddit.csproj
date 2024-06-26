@@ -9,6 +9,7 @@
     <ProjectReference Include="..\JackHenry.Console\JackHenry.Console.csproj" />
     <ProjectReference Include="..\JackHenry.MessageBroker\JackHenry.MessageBroker.csproj" />
     <ProjectReference Include="..\JackHenry.Models\JackHenry.Models.csproj" />
+    <ProjectReference Include="..\JackHenry.Proxy.CRUD\JackHenry.Proxy.CRUD.csproj" />
     <ProjectReference Include="..\JackHenry.Proxy.Reddit\JackHenry.Proxy.Reddit.csproj" />
   </ItemGroup>
 
